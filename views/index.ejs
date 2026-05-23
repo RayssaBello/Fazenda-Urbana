@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fazenda Urbana</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <!-- Header da página -->
+  <header class="header">
+    <div class="header_menu">
+
+      <a class="header_logo">
+        <img src="/logo.png" alt="Logo">
+      </a>
+      
+      <!-- Navzinho com os botoes indo para cada parte da pagina-->
+  <nav class="header_nav">
+    <ul class="lista_nav"> 
+      <li><a href="/">Início</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/impactos">Impacto</a></li>
+      <li><a href="/contato">Contato</a></li>
+      <li><a href="/parceiros">Parceiros</a></li>
+       <li><a href="/produtos">Produtos</a></li>
+    </ul>
+</nav>
+      
+      <!--Botao de buscar, so para ficar bonito, o site é pequeno nem vai precisar ... -->
+      <form id="form_busca" class="header_busca">
+        <input id="input_busca" type="search" name="busca" placeholder="Pesquisar...">
+        <button id="btn_busca" type="submit">Buscar</button>
+      </form>
+
+    </div>
+  </header>
+
+<main>
+
+  <!-- CARROSSEL -->
+  <div class="carrossel_container">
+
+    <button class="carrossel_btn_voltar">
+      <
+    </button>
+
+    <div class="carrossel_wrapper">
+
+      <div id="carrossel">
+
+        <img src="/img/img3.jpeg" alt="Imagem 1">
+
+        <img src="/img/img4.jpeg" alt="Imagem 2">
+
+      </div>
+
+    </div>
+
+    <button class="carrossel_btn_avancar">
+      >
+    </button>
+
+  </div>
+
+</section>
+
+    <!-- class overlay pra deixar um fundo com uma sobreposicao nas imagens-->
+    <div class="overlay">
+      <h1>Fazenda Urbana</h1>
+      <p>Produzindo sustentabilidade no coração da cidade</p>
+      <a class="botao_contato" id="botao_contato" href="/contato">
+    <strong>ENTRE EM CONTATO!</strong>
+</a>
+    </div>
+  </section>
+
+ 
+    <!-- Etapas que tomamos -->
+    <section id="etapas" class="section_etapas">
+      <h2>Etapas do Projeto</h2>
+
+      <article class="etapa">
+        <h3>Diagnóstico</h3>
+        <p>Análise do desperdício alimentar e da falta de acesso a alimentos frescos.</p>
+      </article>
+
+      <article class="etapa">
+        <h3>Mapeamento</h3>
+        <p>Identificação de terrenos e espaços urbanos disponíveis.</p>
+      </article>
+
+      <article class="etapa">
+        <h3>Planejamento</h3>
+        <p>Definição de objetivos e estratégias do projeto.</p>
+      </article>
+
+      <article class="etapa">
+        <h3>Execução</h3>
+        <p>Implementação das fazendas urbanas e tecnologias.</p>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- footer / fim da página -->
+  <footer class="footer">
+    <p>&copy; 2026 Fazenda Urbana</p>
+  </footer>
+
+  <script src="/js/carrossel.js"></script>
+
+</body>
+</html>
