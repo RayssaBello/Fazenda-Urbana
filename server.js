@@ -1,10 +1,18 @@
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
+const Usuario = require('./models/Usuario');
+const Pedido = require('./models/Pedido');
 
 const app = express();
 const port = 3000;
+
+mongoose.connect('mongodb://127.0.0.1:27017/fazendaurbana')
+.then(() => console.log('MongoDB conectado'))
+.catch((err) => console.log(err));
+
 
 // Configurações
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -59,13 +67,31 @@ app.get('/cadastro', (req, res) => {
     res.render('cadastro');
 });
 
-app.post('/cadastro', (req, res) => {
+app.post('/cadastro', async (req, res) => {
 
-    const { nome, senha, endereco } = req.body;
+    try {
 
-    console.log(nome, senha, endereco);
+        const { nome, endereco, senha } = req.body;
 
-    res.redirect('/login');
+        const novoUsuario = new Usuario({
+            nome,
+            endereco,
+            senha
+        });
+
+        await novoUsuario.save();
+
+        console.log('Usuário salvo no MongoDB');
+
+        res.redirect('/login');
+
+    } catch (erro) {
+
+        console.log(erro);
+
+        res.send(erro.message);
+
+    }
 
 });
 
@@ -112,8 +138,60 @@ app.get('/produtos', verificarAutenticacao, (req, res) => {
         usuario: req.session.usuario
     });
 
+});  
+
+app.delete('/produtos/:id', (req, res) => {
+
+    const id = req.params.id;
+
+    res.json({
+        mensagem: `Produto ${id} excluído`
+    });
+
 });
 
+app.put('/produtos/:id', (req, res) => {
+
+    const id = req.params.id;
+
+    const { nome } = req.body;
+
+    res.json({
+        mensagem: `Produto ${id} atualizado para ${nome}`
+    });
+
+});
+
+app.post('/pedido', async (req, res) => {
+
+    try {
+
+        const { produtos } = req.body;
+
+        const novoPedido = new Pedido({
+
+            usuario: req.session.usuario,
+            produtos
+
+        });
+
+        await novoPedido.save();
+
+        res.json({
+            mensagem: 'Pedido enviado com sucesso!'
+        });
+
+    } catch (erro) {
+
+        console.log(erro);
+
+        res.status(500).json({
+            mensagem: 'Erro ao enviar pedido'
+        });
+
+    }
+
+});
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
