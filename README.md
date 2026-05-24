@@ -18,15 +18,6 @@ O Fazenda Urbana é uma aplicação web criada para demonstrar como a tecnologia
 - Rotas REST
 - Renderização dinâmica
 
-## Estrutura
-```bash
-models/
-views/
-public/
-server.js
-
-
-
 ## ⚙️ Executar
 
 ```bash
