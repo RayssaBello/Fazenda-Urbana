@@ -18,7 +18,7 @@ O Fazenda Urbana é uma aplicação web criada para demonstrar como a tecnologia
 - Rotas REST
 - Renderização dinâmica
 
-## ⚙️ Executar
+##  Executar
 
 ```bash
 npm install
@@ -27,7 +27,7 @@ node server.js
 
 ---
 
-## 📚 Aprendizados
+##  Aprendizados
 
 Durante o desenvolvimento deste projeto, foram aplicados conhecimentos em:
 
@@ -42,7 +42,7 @@ Durante o desenvolvimento deste projeto, foram aplicados conhecimentos em:
 
 ---
 
-## 👩‍💻 Desenvolvedores
+## Desenvolvedores
 
 - Rayssa Belo
 - Vinicius Souza
