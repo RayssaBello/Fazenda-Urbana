@@ -24,3 +24,25 @@ O Fazenda Urbana é uma aplicação web criada para demonstrar como a tecnologia
 npm install
 node server.js
 ```
+
+---
+
+## 📚 Aprendizados
+
+Durante o desenvolvimento deste projeto, foram aplicados conhecimentos em:
+
+- Desenvolvimento Full Stack
+- Integração entre Front-End e Back-End
+- APIs REST
+- Banco de Dados NoSQL
+- Estrutura MVC
+- Renderização dinâmica com EJS
+- Comunicação com servidor utilizando fetch()
+- Organização de projetos escaláveis
+
+---
+
+## 👩‍💻 Desenvolvedores
+
+- Rayssa Belo
+- Vinicius Souza
