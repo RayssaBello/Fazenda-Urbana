@@ -1,4 +1,4 @@
-# 🌱 Fazenda Urbana
+#  Fazenda Urbana
 Plataforma web desenvolvida para promover sustentabilidade urbana, agricultura consciente e impacto social positivo através da tecnologia.
 O Fazenda Urbana é uma aplicação web criada para demonstrar como a tecnologia pode contribuir para soluções sustentáveis nas cidades, incentivando o uso inteligente de espaços urbanos para produção de alimentos e conscientização ambiental
 
